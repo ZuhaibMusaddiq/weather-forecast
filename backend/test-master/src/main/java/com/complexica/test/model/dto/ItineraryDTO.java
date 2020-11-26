@@ -16,5 +16,6 @@ public class ItineraryDTO {
     List<JourneyDTO> journeyList;
     private Long id;
     private String name;
+    private String description;
     private Long accountId;
 }

@@ -24,8 +24,12 @@ public class Itinerary implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
+
     @Column(length = 50, nullable = false)
     private String name;
+
+    @Column(length = 200, nullable = true)
+    private String description;
 
     @Column(name = "account_id", nullable = true)
     private Long accountId;

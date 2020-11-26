@@ -60,6 +60,7 @@ public class ItineraryService {
         return ItineraryDTO.builder()
                 .id(itinerary.getId())
                 .name(itinerary.getName())
+                .description(itinerary.getDescription())
                 .accountId(itinerary.getAccountId())
                 .journeyList(getJourneyList(itinerary.getJourneys()))
                 .build();
@@ -101,6 +102,7 @@ public class ItineraryService {
 
     protected Itinerary dtoToEntity(ItineraryDTO dto, Itinerary itinerary) {
         itinerary.setName(dto.getName());
+        itinerary.setDescription(dto.getDescription());
         itinerary.setAccountId(dto.getAccountId());
         if (!CollectionUtils.isEmpty(dto.getJourneyList())) {
             itinerary.getJourneys().clear();
