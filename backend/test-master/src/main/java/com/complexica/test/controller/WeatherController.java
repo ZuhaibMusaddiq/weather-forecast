@@ -1,26 +1,38 @@
 package com.complexica.test.controller;
 
+import com.complexica.test.model.dto.WeatherDTO;
 import com.complexica.test.service.WeatherService;
+import com.complexica.test.util.DateUtil;
 import lombok.extern.slf4j.Slf4j;
-import org.openweathermap.WeatherDTO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Date;
+import java.util.List;
 
 @Slf4j
 @RestController
-@RequestMapping("/api/v1/weather")
+@RequestMapping("/api/v1/forecast")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class WeatherController {
 
     @Autowired
     private WeatherService weatherService;
 
-    @GetMapping("/forecasts")
-    @ResponseBody
-    public ResponseEntity<?> getCityWeatherAtDate(@RequestParam String cityName, @RequestParam Date date, @RequestParam(required = false, defaultValue = "metric") String units) {
-        final ResponseEntity<WeatherDTO> responseEntity = weatherService.getCityWeatherAtDate(cityName, date, units);
-        return ResponseEntity.ok(responseEntity.getBody());
+    @GetMapping("/{city}")
+    public ResponseEntity<List<WeatherDTO>> getWeatherForecastByCity(@PathVariable("city") String cityName, @RequestParam Integer days, @RequestParam(required = false, defaultValue = "metric") String units) {
+        try {
+            List<WeatherDTO> list = weatherService.getWeatherForecastByCity(cityName, DateUtil.todayPlusDays(days), units);
+
+            if (CollectionUtils.isEmpty(list)) {
+                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+            }
+            return new ResponseEntity<>(list, HttpStatus.OK);
+        } catch (Exception e) {
+            log.error(e.getMessage());
+            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 }

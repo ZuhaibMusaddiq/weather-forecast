@@ -8,9 +8,9 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 public class CityDTO {
-    public int id;
-    public String name;
-    public String state;
-    public String country;
-    public Coord coord;
+    private int id;
+    private String name;
+    private String state;
+    private String country;
+    private Coord coord;
 }

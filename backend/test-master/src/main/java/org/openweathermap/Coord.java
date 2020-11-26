@@ -8,6 +8,6 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 public class Coord {
-    public double lat;
-    public double lon;
+    private double lat;
+    private double lon;
 }

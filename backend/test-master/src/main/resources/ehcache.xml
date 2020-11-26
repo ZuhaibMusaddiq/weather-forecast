@@ -1,13 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<config xmlns="http://www.ehcache.org/v3">
-    <cache alias="forecasts">
-        <key-type>org.springframework.cache.interceptor.SimpleKey</key-type>
-        <value-type>java.util.List</value-type>
-        <expiry>
-            <ttl unit="minutes">5</ttl>
-        </expiry>
-        <resources>
-            <heap unit="kB">10</heap>
-        </resources>
+<ehcache>
+    <cache name="forecasts"
+           maxElementsInMemory="1000"
+           eternal="false"
+           timeToIdleSeconds="0"
+           timeToLiveSeconds="7200"
+           overflowToDisk="false"
+           diskPersistent="false"
+           diskExpiryThreadIntervalSeconds="120">
     </cache>
-</config>
+</ehcache>

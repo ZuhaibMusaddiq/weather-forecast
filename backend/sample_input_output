@@ -1,0 +1,197 @@
+
+
+http://localhost:8080/api/v1/itinerary   [POST]
+
+BODY
+
+{
+	"name": "my itenary",
+	"journeyList": [
+			{
+				"cityName": "Adelaide",
+				"travelDate": "21-01-2020"
+			}
+		]
+}
+
+
+RESPONSE
+
+{
+    "journeyList": [
+        {
+            "id": 8,
+            "cityName": "Adelaide",
+            "travelDate": "21-01-2020"
+        }
+    ],
+    "id": 7,
+    "name": "my itenary"
+}
+
+
+--------------------------------------------------------------
+
+http://localhost:8080/api/v1/itinerary/7   [PUT]
+
+BODY
+
+{
+    "journeyList": [
+        {
+            "cityName": "Adelaide",
+            "travelDate": "21-01-2020"
+        },
+        {
+            "cityName": "Sydney",
+            "travelDate": "21-01-2020"
+        }
+    ],
+    "name": "my itenary updated"
+}
+
+
+RESPONSE
+
+{
+    "journeyList": [
+        {
+            "id": 11,
+            "cityName": "Sydney",
+            "travelDate": "21-01-2020"
+        },
+        {
+            "id": 12,
+            "cityName": "Adelaide",
+            "travelDate": "21-01-2020"
+        }
+    ],
+    "id": 7,
+    "name": "my itenary updated"
+}
+
+--------------------------------------------------------------
+
+http://localhost:8080/api/v1/itinerary/7    [GET]
+
+RESPONSE
+
+{
+    "journeyList": [
+        {
+            "id": 11,
+            "cityName": "Sydney",
+            "travelDate": "21-01-2020"
+        },
+        {
+            "id": 12,
+            "cityName": "Adelaide",
+            "travelDate": "21-01-2020"
+        }
+    ],
+    "id": 7,
+    "name": "my itenary updated"
+}
+
+--------------------------------------------------------------
+http://localhost:8080/api/v1/itinerary   [GET]
+
+RESPONSE
+[
+    {
+        "journeyList": [
+            {
+                "id": 14,
+                "cityName": "Adelaide",
+                "travelDate": "21-01-2020"
+            }
+        ],
+        "id": 13,
+        "name": "my itenary"
+    }
+]
+--------------------------------------------------------------
+
+
+http://localhost:8080/api/v1/itinerary/7   [DELETE]
+
+RESPONSE   204 NO Content
+
+--------------------------------------------------------------
+
+http://localhost:8080/api/v1/forecast/Adelaide?days=0 [GET]
+
+RESPONSE
+
+[
+    {
+        "dt": 1606446000,
+        "temp": 33.35,
+        "feels_like": 29.9,
+        "temp_min": 33.35,
+        "temp_max": 33.45,
+        "pressure": 1008,
+        "sea_level": 1008,
+        "grnd_level": 1001,
+        "humidity": 23,
+        "temp_kf": -0.1,
+        "weather_id": 802,
+        "main": "Clouds",
+        "description": "scattered clouds",
+        "icon": "03d",
+        "all": 41,
+        "speed": 4.76,
+        "deg": 282,
+        "visibility": 10000,
+        "pop": 0,
+        "pod": "d",
+        "dt_txt": "2020-11-27 03:00:00",
+        "cod": "200",
+        "message": 0,
+        "cnt": 40,
+        "city_id": 2078025,
+        "name": "Adelaide",
+        "lat": -34.9333,
+        "lon": 138.6,
+        "country": "AU",
+        "population": 1074159,
+        "timezone": 37800,
+        "sunrise": 1606418774,
+        "sunset": 1606470036
+    },
+    {
+        "dt": 1606456800,
+        "temp": 34.07,
+        "feels_like": 31.17,
+        "temp_min": 34.07,
+        "temp_max": 34.07,
+        "pressure": 1006,
+        "sea_level": 1006,
+        "grnd_level": 999,
+        "humidity": 20,
+        "temp_kf": 0,
+        "weather_id": 802,
+        "main": "Clouds",
+        "description": "scattered clouds",
+        "icon": "03d",
+        "all": 32,
+        "speed": 3.44,
+        "deg": 278,
+        "visibility": 10000,
+        "pop": 0,
+        "pod": "d",
+        "dt_txt": "2020-11-27 06:00:00",
+        "cod": "200",
+        "message": 0,
+        "cnt": 40,
+        "city_id": 2078025,
+        "name": "Adelaide",
+        "lat": -34.9333,
+        "lon": 138.6,
+        "country": "AU",
+        "population": 1074159,
+        "timezone": 37800,
+        "sunrise": 1606418774,
+        "sunset": 1606470036
+    }
+]

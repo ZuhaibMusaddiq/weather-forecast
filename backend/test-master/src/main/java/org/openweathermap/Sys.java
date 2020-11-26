@@ -8,5 +8,5 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 public class Sys {
-    public String pod;
+    private String pod;
 }
