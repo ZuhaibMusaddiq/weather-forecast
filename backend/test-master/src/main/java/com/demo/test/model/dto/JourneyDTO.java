@@ -1,4 +1,4 @@
-package com.complexica.test.model.dto;
+package com.demo.test.model.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;

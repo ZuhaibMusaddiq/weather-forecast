@@ -1,8 +1,8 @@
-package com.complexica.test.controller;
+package com.demo.test.controller;
 
-import com.complexica.test.model.dto.WeatherDTO;
-import com.complexica.test.service.WeatherService;
-import com.complexica.test.util.DateUtil;
+import com.demo.test.model.dto.WeatherDTO;
+import com.demo.test.service.WeatherService;
+import com.demo.test.util.DateUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

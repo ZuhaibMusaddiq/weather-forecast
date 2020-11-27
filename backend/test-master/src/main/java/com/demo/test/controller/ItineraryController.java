@@ -1,7 +1,7 @@
-package com.complexica.test.controller;
+package com.demo.test.controller;
 
-import com.complexica.test.model.dto.ItineraryDTO;
-import com.complexica.test.service.ItineraryService;
+import com.demo.test.model.dto.ItineraryDTO;
+import com.demo.test.service.ItineraryService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

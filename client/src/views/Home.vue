@@ -1,7 +1,6 @@
 <template>
   <div class="home">
-    <!-- <img alt="Vue logo" src="../assets/logo.png" /> -->
-    <ListItineraryComponent msg="Hello world!" />
+    <ListItineraryComponent msg="Saved Itineraries" />
   </div>
 </template>
 

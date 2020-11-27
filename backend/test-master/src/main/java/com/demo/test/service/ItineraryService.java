@@ -1,10 +1,10 @@
-package com.complexica.test.service;
+package com.demo.test.service;
 
-import com.complexica.test.model.dto.ItineraryDTO;
-import com.complexica.test.model.dto.JourneyDTO;
-import com.complexica.test.model.entities.Itinerary;
-import com.complexica.test.model.entities.Journey;
-import com.complexica.test.repository.ItineraryRepository;
+import com.demo.test.model.dto.ItineraryDTO;
+import com.demo.test.model.dto.JourneyDTO;
+import com.demo.test.model.entities.Itinerary;
+import com.demo.test.model.entities.Journey;
+import com.demo.test.repository.ItineraryRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

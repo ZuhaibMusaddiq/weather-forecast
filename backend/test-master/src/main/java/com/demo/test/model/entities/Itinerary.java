@@ -1,4 +1,4 @@
-package com.complexica.test.model.entities;
+package com.demo.test.model.entities;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

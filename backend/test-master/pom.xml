@@ -9,8 +9,8 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>com.complexica</groupId>
-    <artifactId>demo</artifactId>
+    <groupId>com.demo</groupId>
+    <artifactId>test</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>demo</name>
     <description>test demo</description>

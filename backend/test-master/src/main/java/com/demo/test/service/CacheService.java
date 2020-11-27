@@ -1,4 +1,4 @@
-package com.complexica.test.service;
+package com.demo.test.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.jpa.vendor.HibernateJpaSessionFactoryBean;

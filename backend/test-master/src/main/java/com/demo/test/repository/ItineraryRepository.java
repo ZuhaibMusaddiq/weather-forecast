@@ -1,6 +1,6 @@
-package com.complexica.test.repository;
+package com.demo.test.repository;
 
-import com.complexica.test.model.entities.Itinerary;
+import com.demo.test.model.entities.Itinerary;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;

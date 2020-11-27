@@ -1,4 +1,4 @@
-package com.complexica.test;
+package com.demo.test;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cache.CacheManager;

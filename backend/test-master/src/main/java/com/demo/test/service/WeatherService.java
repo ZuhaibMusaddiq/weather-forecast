@@ -1,7 +1,7 @@
-package com.complexica.test.service;
+package com.demo.test.service;
 
-import com.complexica.test.model.dto.WeatherDTO;
-import com.complexica.test.util.DateUtil;
+import com.demo.test.model.dto.WeatherDTO;
+import com.demo.test.util.DateUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.openweathermap.ResponseWeatherDTO;
 import org.openweathermap.WeatherData;
